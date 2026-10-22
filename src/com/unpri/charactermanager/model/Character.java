@@ -1,6 +1,8 @@
 
 package com.unpri.charactermanager.model;
 
+import java.util.Objects;
+
 public class Character {
     private String name;
     private CharacterType type;
@@ -8,6 +10,9 @@ public class Character {
     private int hitPoints;
     private int attack;
     private int mana;
+    private int id;
+
+    private static int totalCharacterCreated = 0;
 
     // Constructor pertama: membuat karakter dengan nilai awal.
     public Character(String name, CharacterType type) {
@@ -17,6 +22,9 @@ public class Character {
         this.hitPoints = 100;
         this.attack = 10;
         this.mana = 0;
+
+        totalCharacterCreated++;
+        this.id = totalCharacterCreated;
     }
 
     // Constructor kedua: membuat karakter dengan level tertentu.
@@ -25,6 +33,17 @@ public class Character {
         this.type = type;
         setLevel(level);
         this.mana = 0;
+
+        totalCharacterCreated++;
+        this.id = totalCharacterCreated;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public static int getTotalCharacterCreated() {
+        return totalCharacterCreated;
     }
 
     public String getName() {
@@ -93,10 +112,31 @@ public class Character {
         return hitPoints > 0;
     }
 
+    // Dua karakter dianggap sama jika namanya sama.
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+
+        if (!(obj instanceof Character)) {
+            return false;
+        }
+
+        Character other = (Character) obj;
+        return Objects.equals(this.name, other.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
     @Override
     public String toString() {
         return "Character{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", type=" + type +
                 ", level=" + level +
                 ", hitPoints=" + hitPoints +
