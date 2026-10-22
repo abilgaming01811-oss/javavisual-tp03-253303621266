@@ -56,9 +56,8 @@ Method ini tidak mengubah daftar karakter dan tidak mengekspos ArrayList interna
 Pengujian dilakukan melalui Main.java, meliputi penambahan karakter, penolakan nama duplikat, pencarian dan penghapusan karakter, rata-rata level, pencarian tipe, salinan ArrayList, serta eksperimen reference.
 
 ### Screenshot Output
-
-Tambahkan screenshot hasil pengujian program di bagian ini.
+![Hasil pengujian TP5](screenshots/hasil-pengujian-tp5.png)
 
 ### Analisis Reference dan Rancangan
 
-Dokumen Google Docs: [tempel tautan Google Docs di sini]
+Dokumen Google Docs: https://docs.google.com/document/d/1WKXGvrMSgYoM_9AsWkLYff1ITNmU3Cim8fgmN8RURWU/edit?usp=sharing
