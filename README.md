@@ -118,4 +118,4 @@ Karakter dengan level minimal 5 ditampilkan menggunakan teks emas dan tebal. Bat
 
 ### Analisis GUI dan MVC
 
-Dokumen Google Docs: [Tempelkan link Google Docs di sini]
+Dokumen Google Docs:(https://docs.google.com/document/d/1WKXGvrMSgYoM_9AsWkLYff1ITNmU3Cim8fgmN8RURWU/edit?usp=sharing)
