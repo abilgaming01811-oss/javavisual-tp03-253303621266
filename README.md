@@ -61,3 +61,33 @@ Pengujian dilakukan melalui Main.java, meliputi penambahan karakter, penolakan n
 ### Analisis Reference dan Rancangan
 
 Dokumen Google Docs: https://docs.google.com/document/d/1WKXGvrMSgYoM_9AsWkLYff1ITNmU3Cim8fgmN8RURWU/edit?usp=sharing
+
+
+## TP8 — Java Visual
+
+### Screenshot Sebelum dan Sesudah
+
+**Sebelum penambahan karakter:**
+
+![Screenshot sebelum](screenshots/tp8-sebelum.png)
+
+**Sesudah penambahan karakter:**
+
+![Screenshot sesudah](screenshots/tp8-sesudah.png)
+
+### Implementasi GUI
+
+Program menggunakan Java Swing untuk menampilkan data karakter melalui MainWindow. Daftar karakter dibuat secara dinamis menggunakan perulangan, sedangkan statistik rata-rata level dihitung berdasarkan data yang tersimpan dalam CharacterManager.
+
+### Aliran Data dan MVC
+
+Main.java membuat data karakter dan memulai GUI menggunakan SwingUtilities.invokeLater(). CharacterManager mengelola daftar karakter serta menyediakan informasi jumlah dan rata-rata level. MainWindow bertanggung jawab menampilkan data karakter ke dalam JLabel. Pembagian tanggung jawab tersebut berkaitan dengan konsep MVC karena pengelolaan data dan tampilan dipisahkan.
+
+### Karakter Baru
+
+- Boromir — tipe WARRIOR, level 6. Dipilih sebagai karakter bertipe petarung dengan level yang berbeda dari Aragorn.
+- Frodo — tipe ARCHER, level 4. Dipilih untuk menambah variasi karakter dan menggunakan level yang lebih rendah daripada karakter lainnya.
+
+### Analisis GUI dan MVC
+
+Dokumen Google Docs:(https://docs.google.com/document/d/1WKXGvrMSgYoM_9AsWkLYff1ITNmU3Cim8fgmN8RURWU/edit?usp=sharing)
