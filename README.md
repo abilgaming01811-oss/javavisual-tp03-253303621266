@@ -91,3 +91,31 @@ Main.java membuat data karakter dan memulai GUI menggunakan SwingUtilities.invok
 ### Analisis GUI dan MVC
 
 Dokumen Google Docs:(https://docs.google.com/document/d/1WKXGvrMSgYoM_9AsWkLYff1ITNmU3Cim8fgmN8RURWU/edit?usp=sharing)
+
+
+## TP10 — AppTheme dan MainWindow v0.4
+
+### Screenshot Sebelum (v0.3)
+
+![Tampilan sebelum penerapan tema](screenshots/tp10-sebelum.png)
+
+### Screenshot Sesudah (v0.4)
+
+![Tampilan setelah penerapan tema](screenshots/tp10-sesudah.png)
+
+### Pemisahan Tema dan Model
+
+Warna tampilan disimpan di AppTheme karena pengaturan warna termasuk tanggung jawab View dalam pola MVC. Character sebagai Model bertugas menyimpan dan menyediakan data karakter, seperti nama, role, dan level. Jika warna disimpan di Character, Model akan bergantung pada kebutuhan tampilan sehingga pemisahan tanggung jawab menjadi kurang baik. Dengan AppTheme, perubahan warna dapat dilakukan pada satu tempat tanpa mengubah data karakter.
+
+### Dua Properti Tambahan
+
+1. **Tooltip:** setToolTipText() menampilkan keterangan role saat kursor diarahkan ke kartu. Properti ini membantu pengguna memahami karakter tanpa menambah teks panjang pada tampilan utama.
+2. **Cursor:** setCursor() mengubah kursor menjadi bentuk tangan saat berada di atas kartu. Properti ini memberikan penanda visual saat pengguna mengarahkan kursor ke kartu.
+
+### Mini-Challenge
+
+Karakter dengan level minimal 5 ditampilkan menggunakan teks emas dan tebal. Batas level disimpan pada konstanta HIGH_LEVEL_THRESHOLD di AppTheme agar nilai batas tidak tersebar di kode tampilan.
+
+### Analisis GUI dan MVC
+
+Dokumen Google Docs: [Tempelkan link Google Docs di sini]

@@ -10,31 +10,27 @@ import javax.swing.SwingUtilities;
 public class Main {
 
     public static void main(String[] args) {
-
         CharacterManager manager = new CharacterManager();
 
-        // Menambahkan lima karakter.
         manager.addCharacter(
-            new Character("Aragorn", CharacterType.WARRIOR, 5)
+                new Character("Arjuna", CharacterType.WARRIOR, 5)
+        );
+        manager.addCharacter(
+                new Character("Merlin", CharacterType.MAGE, 3)
+        );
+        manager.addCharacter(
+                new Character("Athena", CharacterType.ARCHER, 4)
+        );
+        manager.addCharacter(
+                new Character("Gatotkaca", CharacterType.WARRIOR, 7)
+        );
+        manager.addCharacter(
+                new Character("Morgana", CharacterType.MAGE, 1)
+        );
+        manager.addCharacter(
+                new Character("Legolas", CharacterType.ARCHER, 6)
         );
 
-        manager.addCharacter(
-            new Character("Gandalf", CharacterType.MAGE, 10)
-        );
-
-        manager.addCharacter(
-            new Character("Legolas", CharacterType.ARCHER, 8)
-        );
-
-        manager.addCharacter(
-            new Character("Boromir", CharacterType.WARRIOR, 6)
-        );
-
-        manager.addCharacter(
-            new Character("Frodo", CharacterType.ARCHER, 4)
-        );
-
-        // Membuat GUI pada Event Dispatch Thread.
         SwingUtilities.invokeLater(() -> {
             MainWindow window = new MainWindow(manager);
             window.setVisible(true);
