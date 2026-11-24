@@ -227,5 +227,5 @@ git diff -- src/com/unpri/charactermanager/model/
 ## 8. Analisis Layout dan MVC
 
 Dokumen analisis Google Docs:
-](https://docs.google.com/document/d/1WKXGvrMSgYoM_9AsWkLYff1ITNmU3Cim8fgmN8RURWU/edit?usp=sharing)
+https://docs.google.com/document/d/1WKXGvrMSgYoM_9AsWkLYff1ITNmU3Cim8fgmN8RURWU/edit?usp=sharing
 
