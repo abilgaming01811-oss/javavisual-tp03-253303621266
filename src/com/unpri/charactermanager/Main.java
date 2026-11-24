@@ -10,25 +10,39 @@ import javax.swing.SwingUtilities;
 public class Main {
 
     public static void main(String[] args) {
+
         CharacterManager manager = new CharacterManager();
 
         manager.addCharacter(
-                new Character("Arjuna", CharacterType.WARRIOR, 5)
+            new Character("Arjuna", CharacterType.WARRIOR, 5)
         );
+
         manager.addCharacter(
-                new Character("Merlin", CharacterType.MAGE, 3)
+            new Character("Merlin", CharacterType.MAGE, 3)
         );
+
         manager.addCharacter(
-                new Character("Athena", CharacterType.ARCHER, 4)
+            new Character("Athena", CharacterType.ARCHER, 4)
         );
+
         manager.addCharacter(
-                new Character("Gatotkaca", CharacterType.WARRIOR, 7)
+            new Character("Gatotkaca", CharacterType.WARRIOR, 7)
         );
+
         manager.addCharacter(
-                new Character("Morgana", CharacterType.MAGE, 1)
+            new Character("Morgana", CharacterType.MAGE, 1)
         );
+
         manager.addCharacter(
-                new Character("Legolas", CharacterType.ARCHER, 6)
+            new Character("Legolas", CharacterType.ARCHER, 6)
+        );
+
+        manager.addCharacter(
+            new Character("Elrond", CharacterType.HEALER, 8)
+        );
+
+        manager.addCharacter(
+            new Character("Boromir", CharacterType.WARRIOR, 2)
         );
 
         SwingUtilities.invokeLater(() -> {
