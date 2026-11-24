@@ -33,19 +33,27 @@ public final class AppTheme {
     private AppTheme() {
     }
 
-    // Menentukan warna kartu berdasarkan role
-    public static Color colorFor(CharacterType type) {
-        switch (type) {
-            case WARRIOR:
-                return Color.decode("#d63031");
-            case MAGE:
-                return Color.decode("#0984e3");
-            case ARCHER:
-                return Color.decode("#00b894");
-            default:
-                return Color.GRAY;
-        }
+   
+// Menentukan warna kartu berdasarkan role
+public static Color colorFor(CharacterType type) {
+    switch (type) {
+        case WARRIOR:
+            return Color.decode("#d63031");
+
+        case MAGE:
+            return Color.decode("#0984e3");
+
+        case ARCHER:
+            return Color.decode("#00b894");
+
+        case HEALER:
+            return Color.decode("#a29bfe");
+
+        default:
+            return Color.GRAY;
     }
+}
+
 
     // Deskripsi untuk tooltip
     public static String describe(CharacterType type) {
