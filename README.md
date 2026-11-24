@@ -119,3 +119,113 @@ Karakter dengan level minimal 5 ditampilkan menggunakan teks emas dan tebal. Bat
 ### Analisis GUI dan MVC
 
 Dokumen Google Docs:(https://docs.google.com/document/d/1WKXGvrMSgYoM_9AsWkLYff1ITNmU3Cim8fgmN8RURWU/edit?usp=sharing)
+
+
+# TP12 — Responsive Layout CharacterManager
+
+## 1. Implementasi BorderLayout
+
+Pada TP12, MainWindow dikembangkan menjadi versi v0.5
+dengan menggunakan BorderLayout sebagai layout utama.
+
+Empat wilayah yang digunakan:
+
+- NORTH: Header dan panel statistik.
+- CENTER: Daftar karakter menggunakan JScrollPane.
+- EAST: Legenda role menggunakan BoxLayout Y_AXIS.
+- SOUTH: Status bar yang menampilkan total karakter dan versi aplikasi.
+
+## 2. Wireframe Layout
+
+```text
++-------------------------------------------------------+
+|                    HEADER (NORTH)                     |
+|                 CHARACTER MANAGER                     |
+|-------------------------------------------------------|
+|                    STATISTICS                         |
+|  Total Characters | Average Level                     |
+|  High Level       | Total Roles                        |
+|-------------------------------------------------------|
+|                                |                      |
+|          CENTER                |        EAST          |
+|                                |                      |
+|  +-------------------------+   |  CHARACTER ROLES     |
+|  | Arjuna      | Merlin    |   |                      |
+|  +-------------------------+   |  WARRIOR              |
+|  | Athena      | Gatotkaca |   |  MAGE                 |
+|  +-------------------------+   |  ARCHER               |
+|  | Morgana     | Legolas   |   |  HEALER               |
+|  +-------------------------+   |                      |
+|  | Elrond      | Boromir   |   |                      |
+|  +-------------------------+   |                      |
+|                                |                      |
+|-------------------------------------------------------|
+| Total Characters: 8                       v0.5        |
+|                    SOUTH                              |
++-------------------------------------------------------+
+```
+
+## 3. Screenshot Pengujian
+
+### 3.1 Ukuran Awal
+
+![Ukuran awal](screenshots/tp12-awal.png)
+
+### 3.2 Jendela Dilebarkan
+
+![Jendela dilebarkan](screenshots/tp12-lebar.png)
+
+### 3.3 Jendela Dikecilkan
+
+![Jendela dikecilkan](screenshots/tp12-kecil.png)
+
+## 4. Tabel Pengamatan Resize
+
+| Kondisi | Prediksi | Hasil Pengamatan |
+|---|---|---|
+| Ukuran awal | Semua komponen terlihat pada posisi masing-masing | Sesuaikan hasil screenshot |
+| Jendela dilebarkan | Area CENTER mengikuti pertambahan ruang | Sesuaikan hasil screenshot |
+| Jendela dikecilkan | Scrollbar vertikal muncul ketika diperlukan | Sesuaikan hasil screenshot |
+
+## 5. Struktur Panel Bersarang
+
+Aplikasi menggunakan BorderLayout sebagai layout utama
+yang membagi tampilan menjadi empat wilayah. Panel NORTH
+berisi header dan panel statistik dengan GridLayout 2x2.
+Panel CENTER berisi panel pembungkus kartu karakter yang
+dimasukkan ke JScrollPane. Panel EAST menggunakan BoxLayout
+untuk menyusun legenda secara vertikal, sedangkan panel
+SOUTH menggunakan BoxLayout untuk memisahkan teks status
+dan versi aplikasi.
+
+## 6. Alasan Pemilihan Layout
+
+Panel statistik menggunakan GridLayout 2x2 karena memiliki
+empat informasi yang disusun secara teratur dalam dua baris
+dan dua kolom. GridLayout membuat setiap informasi memiliki
+ruang yang konsisten.
+
+BoxLayout Y_AXIS dipilih untuk legenda karena setiap role
+perlu ditampilkan secara vertikal. FlowLayout tidak dipilih
+untuk legenda karena susunan horizontal dapat membuat
+legenda kurang teratur ketika ruang berubah.
+
+Untuk daftar karakter digunakan GridLayout dengan dua kolom
+agar kartu tersusun rapi. Panel pembungkus menggunakan
+BorderLayout dan menempatkan panel kartu di NORTH sebelum
+dimasukkan ke JScrollPane.
+
+## 7. Pengujian Package Model
+
+Package model tidak mengalami perubahan pada TP12.
+Pengecekan dilakukan menggunakan perintah:
+
+```powershell
+git diff -- src/com/unpri/charactermanager/model/
+```
+
+## 8. Analisis Layout dan MVC
+
+Dokumen analisis Google Docs:
+](https://docs.google.com/document/d/1WKXGvrMSgYoM_9AsWkLYff1ITNmU3Cim8fgmN8RURWU/edit?usp=sharing)
+
